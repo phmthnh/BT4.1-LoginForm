@@ -1,34 +1,52 @@
-# BT4.1 – Form Đăng Nhập (Login Form) chuẩn UX
+# 🔐 Bài Tập 4.1 – Form Đăng Nhập
 
-> **Môn:** Lập trình Windows Forms với C# | **Framework:** .NET 10.0
+Bài tập xây dựng giao diện đăng nhập chuẩn UX sử dụng Windows Forms C#.
 
-## Mục tiêu
-Xây dựng Login Form có **Validation ErrorProvider**, ẩn/hiện mật khẩu, gán `AcceptButton` / `CancelButton`.
+---
 
-## Tính năng
+## 📋 Mô tả
 
-| Control | Chức năng |
-|---------|-----------|
-| `txtUsername` | Nhập tên đăng nhập |
-| `txtPassword` | Nhập mật khẩu (mặc định ẩn `*`) |
-| `chkShowPassword` | ✅ Tick → hiện mật khẩu / bỏ tick → ẩn |
-| `btnLogin` | Đăng nhập + Validation · kích hoạt bằng phím **Enter** |
-| `btnExit` | Thoát ứng dụng · kích hoạt bằng phím **Esc** |
-| `errorProvider` | Hiện lỗi khi bỏ trống Username hoặc Password |
+Form đăng nhập với đầy đủ các tính năng:
+- Kiểm tra dữ liệu nhập bằng **ErrorProvider** (không để trống)
+- Ẩn/hiện mật khẩu bằng **CheckBox**
+- Phím **Enter** → kích hoạt nút Đăng Nhập
+- Phím **Esc** → thoát ứng dụng
 
-## Demo
+---
 
-![Login Form - Đăng nhập thành công](Screenshot%202026-09-23%20161706.png)
+## 🖼️ Giao diện
 
-## Cách chạy
+![Giao diện Form Đăng Nhập](Screenshot%202026-09-23%20161706.png)
 
+---
+
+## ⚙️ Các thành phần chính
+
+| Tên Control | Chức năng |
+|-------------|-----------|
+| `txtUsername` | Ô nhập tên đăng nhập |
+| `txtPassword` | Ô nhập mật khẩu (ẩn `***` mặc định) |
+| `chkShowPassword` | Tick để hiện mật khẩu, bỏ tick để ẩn |
+| `btnLogin` | Nút đăng nhập — gán `AcceptButton` (phím Enter) |
+| `btnExit` | Nút thoát — gán `CancelButton` (phím Esc) |
+| `errorProvider` | Hiển thị lỗi khi bỏ trống username hoặc password |
+
+---
+
+## 🚀 Cách chạy
+
+**Bằng Visual Studio:**
+1. Mở file `BT4_1_LoginForm.sln`
+2. Nhấn `F5` để chạy
+
+**Bằng terminal:**
 ```bash
 dotnet run
 ```
 
-hoặc mở file `BT4_1_LoginForm.sln` bằng **Visual Studio 2022+** và nhấn `F5`.
+---
 
-## Yêu cầu hệ thống
+## 🛠️ Yêu cầu
 - .NET 10.0 SDK
-- Windows OS (Windows Forms)
-- Visual Studio 2022 (khuyến nghị)
+- Windows OS
+- Visual Studio 2022 trở lên
