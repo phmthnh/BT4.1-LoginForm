@@ -13,107 +13,130 @@ namespace BT4_1_LoginForm
 
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-
-            // --- Controls ---
-            lblTitle      = new System.Windows.Forms.Label();
-            lblUsername   = new System.Windows.Forms.Label();
-            lblPassword   = new System.Windows.Forms.Label();
-            txtUsername   = new System.Windows.Forms.TextBox();
-            txtPassword   = new System.Windows.Forms.TextBox();
-            chkShowPassword = new System.Windows.Forms.CheckBox();
-            btnLogin      = new System.Windows.Forms.Button();
-            btnExit       = new System.Windows.Forms.Button();
-            errorProvider = new System.Windows.Forms.ErrorProvider(components);
-            ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
-            SuspendLayout();
-
-            // Form
-            Text            = "Đăng Nhập Hệ Thống";
-            Size            = new System.Drawing.Size(400, 300);
-            StartPosition   = System.Windows.Forms.FormStartPosition.CenterScreen;
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            MaximizeBox     = false;
-            AcceptButton    = btnLogin;   // Enter → btnLogin
-            CancelButton    = btnExit;    // Esc   → btnExit
-
+            this.components = new System.ComponentModel.Container();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            this.SuspendLayout();
+            // 
             // lblTitle
-            lblTitle.Text      = "ĐĂNG NHẬP HỆ THỐNG";
-            lblTitle.Font      = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            lblTitle.Location  = new System.Drawing.Point(50, 20);
-            lblTitle.Size      = new System.Drawing.Size(290, 35);
-
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(50, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(290, 35);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "ĐĂNG NHẬP HỆ THỐNG";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblUsername
-            lblUsername.Text     = "Tên đăng nhập:";
-            lblUsername.Location = new System.Drawing.Point(40, 75);
-            lblUsername.Size     = new System.Drawing.Size(120, 23);
-
+            // 
+            this.lblUsername.Location = new System.Drawing.Point(40, 75);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(120, 23);
+            this.lblUsername.TabIndex = 1;
+            this.lblUsername.Text = "Tên đăng nhập:";
+            // 
             // txtUsername
-            txtUsername.Location = new System.Drawing.Point(170, 72);
-            txtUsername.Size     = new System.Drawing.Size(170, 23);
-            txtUsername.TabIndex = 0;
-
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(170, 72);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(170, 23);
+            this.txtUsername.TabIndex = 2;
+            // 
             // lblPassword
-            lblPassword.Text     = "Mật khẩu:";
-            lblPassword.Location = new System.Drawing.Point(40, 115);
-            lblPassword.Size     = new System.Drawing.Size(120, 23);
-
+            // 
+            this.lblPassword.Location = new System.Drawing.Point(40, 115);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(120, 23);
+            this.lblPassword.TabIndex = 3;
+            this.lblPassword.Text = "Mật khẩu:";
+            // 
             // txtPassword
-            txtPassword.Location             = new System.Drawing.Point(170, 112);
-            txtPassword.Size                 = new System.Drawing.Size(170, 23);
-            txtPassword.UseSystemPasswordChar = true;   // Mặc định ẩn mật khẩu
-            txtPassword.TabIndex             = 1;
-
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(170, 112);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(170, 23);
+            this.txtPassword.TabIndex = 4;
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
             // chkShowPassword
-            chkShowPassword.Text             = "Hiển thị mật khẩu";
-            chkShowPassword.Location         = new System.Drawing.Point(170, 143);
-            chkShowPassword.Size             = new System.Drawing.Size(160, 23);
-            chkShowPassword.TabIndex         = 2;
-            chkShowPassword.CheckedChanged  += chkShowPassword_CheckedChanged;
-
+            // 
+            this.chkShowPassword.Location = new System.Drawing.Point(170, 143);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(160, 23);
+            this.chkShowPassword.TabIndex = 5;
+            this.chkShowPassword.Text = "Hiển thị mật khẩu";
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
+            // 
             // btnLogin
-            btnLogin.Text     = "Đăng Nhập";
-            btnLogin.Location = new System.Drawing.Point(90, 190);
-            btnLogin.Size     = new System.Drawing.Size(100, 35);
-            btnLogin.TabIndex = 3;
-            btnLogin.BackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-            btnLogin.ForeColor = System.Drawing.Color.White;
-            btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnLogin.Click   += btnLogin_Click;
-
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(0, 122, 204);
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(90, 190);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(100, 35);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "Đăng Nhập";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // btnExit
-            btnExit.Text     = "Thoát";
-            btnExit.Location = new System.Drawing.Point(210, 190);
-            btnExit.Size     = new System.Drawing.Size(100, 35);
-            btnExit.TabIndex = 4;
-            btnExit.BackColor = System.Drawing.Color.FromArgb(200, 50, 50);
-            btnExit.ForeColor = System.Drawing.Color.White;
-            btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnExit.Click   += btnExit_Click;
-
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(200, 50, 50);
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(210, 190);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(100, 35);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // errorProvider
-            errorProvider.ContainerControl = this;
-
-            Controls.AddRange(new System.Windows.Forms.Control[] {
-                lblTitle, lblUsername, txtUsername,
-                lblPassword, txtPassword, chkShowPassword,
-                btnLogin, btnExit
-            });
-
-            ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
-            ResumeLayout(false);
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // LoginForm
+            // 
+            this.AcceptButton = this.btnLogin;
+            this.CancelButton = this.btnExit;
+            this.ClientSize = new System.Drawing.Size(400, 260);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.chkShowPassword);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnExit);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đăng Nhập Hệ Thống";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
-        // --- Fields ---
-        private System.Windows.Forms.Label    lblTitle;
-        private System.Windows.Forms.Label    lblUsername;
-        private System.Windows.Forms.Label    lblPassword;
-        private System.Windows.Forms.TextBox  txtUsername;
-        private System.Windows.Forms.TextBox  txtPassword;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.CheckBox chkShowPassword;
-        private System.Windows.Forms.Button   btnLogin;
-        private System.Windows.Forms.Button   btnExit;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
